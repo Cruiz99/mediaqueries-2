@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.Title {
+    font-size: 3rem;
+    background: none;
+    color: crimson;
+    border-bottom: none;
+    margin: 40px;
+    text-align: center;
+}
+/*despues de los dispositivos tengan 700 pixeles de ancho, el fondo se vuelve color chocolate*/
+@media screen and (min-width:700px){
+    body {
+        background-color:chocolate;
+    }
+}
+
+/*mientras la pantalla esté entre los 400 y 700 pixeles, el fondo y color del título cambia*/
+@media screen and (min-width:400px), (max-width:700px){
+    .Title {
+        background: #000;
+        color: #fff;
+    }
+}
+
+/*si la pantalla es menor a 600 pixeles, el titulo se alinea a la izquierda y su color de fondo cambia*/
+@media screen and (max-width:600px){
+    .Title {
+        text-align: left;
+        background: steelblue;
+    }
+}
+
+/*cuando se va a imprimir, el titulo cambia de color, tamaño de 5 rem, se alinea a la derecha y se le cambia la fuente a cursiva*/
+@media print {
+    .Title{
+        color: steelblue;
+        font-size: 5rem;
+        text-align: right;
+        font-family: cursive;
+    }
+}
